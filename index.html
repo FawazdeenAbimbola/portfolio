@@ -11,7 +11,8 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
     <link rel="stylehsheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body onload="myLoader(); introText();">
+    <div class="loader" id="loader"><img src="images/logo.png" width="150px" alt=""></div>
     <header class="site-header">
         <nav>
             <img src="images/logo.png" alt="logo" id="logo">
@@ -21,7 +22,7 @@
                     <li><a href="">HOME</a></li>
                     <li><a href="">ABOUT</a></li>
                     <li><a href="">PORTFOLIO</a></li>
-                    <li><a href="">CONTACT</a></li>
+                    <li><a href="">CONTACT</a></li> 
                 </ul>
             </div>
             <img src="images/menu.svg" id="menu" onclick="showMenu()"/>
@@ -35,6 +36,19 @@
                 <li><a href="">CONTACT</a></li>
             </ul>
         </div>
+        <div class="intro">
+            <h3>Hello there, I am </h3>
+            <h1 id="name"> </h1>
+            <h4>I am a Full-stack Web Developer</h4>
+            <div class="social">
+                <a href=""><img src="facebook.svg" alt="" srcset=""></a>
+                <a href=""><img src="twitter.svg" alt=""></a> 
+                <a href=""><img src="discord.svg" alt=""></a> 
+                <a href=""><img src="linkedin.svg" alt=""></a>
+                <a href=""><img src="instagram.svg" alt=""></a>
+            </div>
+        </div>
+        
     </header>
 </body>
 <script src="script.js"></script>

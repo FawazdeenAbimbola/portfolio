@@ -9,9 +9,10 @@
 .site-header{
     min-height: 100vh;
     width:100%;
-    background: linear-gradient(rgba(4, 9, 30, 0.8), rgba(4, 9, 30, 0.7)), url('images/banner.png');;
+    background: linear-gradient(rgba(4, 9, 30, 0.8), rgba(4, 9, 30, 0.7)), url('pexels-adrien-olichon-2387793.jpg');
     background-position:center;
     background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
 }
 nav{
@@ -21,14 +22,33 @@ nav{
     padding:2% 6%;
 }
 
-.navlinks{
+.navlinks-desktop{
 flex:1;
 text-align: right;
 }
-.navlinks ul li{
+.navlinks-desktop ul{
+    margin-right: 70px;
+} 
+.navlinks-desktop ul li{
 list-style-type: none;
+display: inline-block;
+padding: 8px 20px;
+
 
 }
+.navlinks-desktop li a{
+    color: white;
+    padding: 7px 14px;
+    
+    text-decoration: none;
+
+
+}
+.navlinks-desktop ul li a:hover{
+    border-bottom: 1px solid bisque;
+}
+
+
 
 #logo{
     width:100px;
@@ -36,12 +56,152 @@ list-style-type: none;
 }
 #menu{
     width:60px;
+    cursor: pointer;
+}
+.responsive-navlinks{
+    width: 0%;
+}
+.responsive-navlinks{
+    width:0%;
+    height:100%;
+    position: absolute;
+    top:0%;
+    left:0%;
+    z-index: 2;
+    background: black;
+    transition: 0.5s;
+
 }
 
 
-@media (max-width:480px){
+.responsive-navlinks ul {
+    list-style-type: none;
+    padding: 17px 34px;
+    margin: 10%;
+   
+
+}
+.responsive-navlinks ul li a{
+    color: bisque;
+    display: block;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 20px auto;
+    width: 60%;
+    font-weight: 600;
+    text-align: center;
+}
+.responsive-navlinks ul li a:hover{
+    color:white;
+}
+.times{
+    position:absolute;
+    right:5%;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 4.5rem;
+    color:#ccc;
+    cursor:pointer;
+
+}
+
+.social img{
+    width: 25px;
+    cursor: pointer;
+    margin: 0px 10px ;
+}
+.intro{
+
+    position: absolute;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%, -50%) ;
+    width:80%;
+    text-align: center;
+    color: white;
+    }
+    h1{
+        font-size: 82px;
+    }
+    h3{
+        font-size: 28px;
+        margin: 1rem 0;
+    }
+    h4{
+        font-size: 21px;
+        margin: 1rem 0;
+    }
+
+    .social{
+        margin: 5rem 0 0;
+    }
+    .loader{
+        background-color: black;
+        width:100%;
+        min-height: 100vh;
+       
+        z-index: 2;
+    }
+    .loader img{
+        position: absolute;
+        top: 40%;
+        left:45%;
+        border-top: 16px solid bisque;
+        border-right: 16px solid antiquewhite;
+        border-bottom: 16px solid bisque;
+        border-left:16px solid antiquewhite ;
+        border-radius: 50%;
+        margin: 0px auto;
+        transform: translate(-50%, -50%);
+        
+        animation: spin 2s linear infinite ;
+    }
+    @keyframes spin{
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    @media (max-width:600px) {
+        .loader img{
+            position: absolute;
+            top: 40%;
+            left:40%;
+        }
+        h1{
+            font-size: 42px;
+        }
+        h3{
+            font-size: 28px;
+            margin: 1rem 0;
+        }
+        h4{
+            font-size: 21px;
+            margin: 1rem 0;
+        }
+        .intro{
+            
+            width:80%;
+           
+        }
+    
+    }
+    
+@media (max-width:900px){
     *{
         overflow: hidden;
+    }
+    .site-header{
+        min-height: 100vh;
+        width:100%;
+        background: linear-gradient(rgba(4, 9, 30, 0.8), rgba(4, 9, 30, 0.7)), url('pexels-adrien-olichon-2387793.jpg'), url('images/banner.png');;
+        background-position:center;
+        background-size: cover;
+    
+        position: relative;
     }
     #logo{
         width:100px;
@@ -61,8 +221,9 @@ display: none;
     z-index: 2;
     background: black;
     transition: 0.5s;
-    
+
 }
+
 
 .responsive-navlinks ul {
     list-style-type: none;
@@ -90,6 +251,13 @@ display: none;
     font-size: 4.5rem;
     color:#ccc;
 
+}
+.intro{
+    position: absolute;
+    width:100%;
+    top:55%;
+    left:50%;
+    transform: translate(-50%, -50%);
 }
 
 }
